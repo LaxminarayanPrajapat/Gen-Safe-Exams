@@ -1,0 +1,59 @@
+/* ============================================================
+   GEN SAFE EXAM — Base / reset / typography / utilities
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body, #root { height: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--fs-base);
+  color: var(--text);
+  background: var(--background);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.45;
+}
+
+h1, h2, h3, h4, h5 { margin: 0; font-weight: 600; color: var(--navy); letter-spacing: -0.01em; }
+h1 { font-size: var(--fs-2xl); }
+h2 { font-size: var(--fs-xl); }
+h3 { font-size: var(--fs-lg); }
+h4 { font-size: var(--fs-base); }
+p { margin: 0; }
+
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+button { font-family: inherit; }
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--ring);
+  border-radius: var(--radius-sm);
+}
+
+::selection { background: var(--blue-soft); }
+
+/* Scrollbars — thin institutional */
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 6px; border: 2px solid transparent; background-clip: content-box; }
+*::-webkit-scrollbar-track { background: transparent; }
+
+/* ---------- utility ---------- */
+.u-muted { color: var(--muted); }
+.u-small { font-size: var(--fs-md); }
+.u-xs { font-size: var(--fs-sm); }
+.u-bold { font-weight: 600; }
+.u-mono { font-family: var(--font-mono); font-size: var(--fs-sm); }
+.u-right { text-align: right; }
+.u-center { text-align: center; }
+.u-uppercase { text-transform: uppercase; letter-spacing: 0.04em; }
+.u-flex { display: flex; align-items: center; gap: var(--sp-2); }
+.u-flex-between { display: flex; align-items: center; justify-content: space-between; gap: var(--sp-3); }
+.u-wrap { flex-wrap: wrap; }
+.u-grow { flex: 1; }
+.u-stack-2 > * + * { margin-top: var(--sp-2); }
+.u-stack-4 > * + * { margin-top: var(--sp-4); }
+.u-truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.u-clickable { cursor: pointer; }
